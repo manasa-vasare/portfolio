@@ -132,7 +132,7 @@ const Sculpture = ({ isMobile, isLightMode }: { isMobile: boolean, isLightMode: 
         const combinedScale = (clickScale.current + (hoverVal.current * 0.1)) * morphState.current.pop
 
         // Apply visibility/opacities based on morphState
-        const baseScale = (isMobile ? 0.7 : 1) * combinedScale
+        const baseScale = (isMobile ? 0.4 : 1) * combinedScale
 
         if (prismRef.current) {
             prismRef.current.scale.setScalar(THREE.MathUtils.lerp(0.001, 1.25 * baseScale, morphState.current.p1))
@@ -233,10 +233,10 @@ const MorphingSculpture = () => {
     }, [])
 
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-100">
+        <div className={`fixed inset-0 z-0 pointer-events-none ${isMobile ? 'opacity-50' : 'opacity-100'}`}>
             <div className={`absolute inset-0 ${isLightMode ? 'bg-[radial-gradient(circle_at_center,transparent_0%,rgba(248,250,252,0.7)_100%)]' : 'bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,23,42,0.6)_100%)]'}`}></div>
-            <Canvas dpr={[1, 2]}>
-                <PerspectiveCamera makeDefault position={[0, 0, 4]} fov={45} />
+            <Canvas dpr={[1, 1.5]}>
+                <PerspectiveCamera makeDefault position={[0, 0, isMobile ? 6 : 4]} fov={45} />
                 <Sculpture isMobile={isMobile} isLightMode={isLightMode} />
             </Canvas>
         </div>

@@ -890,7 +890,7 @@ function App() {
                       <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest font-mono">Present</span>
                     </div>
 
-                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight group-hover:text-white transition-colors">B.Tech in Computer Science</h3>
+                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">B.Tech in Computer Science</h3>
                     <p className="text-slate-400 text-lg md:text-xl font-medium mb-8 leading-relaxed">
                       Specialized in <span className="text-white italic">Artificial Intelligence</span> & Machine Learning at KLE Technological University.
                     </p>
@@ -939,7 +939,7 @@ function App() {
                       <span className="text-slate-500 text-[10px] font-bold uppercase tracking-widest font-mono">Team Euros Racing</span>
                     </div>
 
-                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight group-hover:text-white transition-colors">Steering Subsystem Intern</h3>
+                    <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Steering Subsystem Intern</h3>
                     <p className="text-slate-400 text-lg md:text-xl font-medium mb-8 leading-relaxed">
                       Contributing to the design and development of high-performance steering mechanisms at <span className="text-white italic">KLE Technological University</span>.
                     </p>
